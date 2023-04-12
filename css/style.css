@@ -1,0 +1,99 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.cdnfonts.com/css/kayak-sans');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-primaria);
+}
+
+:root {
+    --cor-primaria: #FC4B37;
+    --cor-secundaria: #000;
+    --cor-terciaria: #FFF;
+    --cor-auxiliar1: #F4F4F4;
+    --cor-auxiliar2: #D8D8D8;
+
+    --fonte-primaria: 'Satoshi', sans-serif;
+    --fonte-secundaria: 'Kayak Sans', sans-serif;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--cor-terciaria);
+    padding: 20px 0;
+}
+
+#nomeSite {
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#menuHeader ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.botaoLink {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    background-color: var(--cor-terciaria);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 18px 34px;
+    border: solid 1px var(--cor-terciaria);
+    transition: 0.5s;
+}
+
+header .botaoLink:hover, #introducao .botaoLink:hover {
+    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
+    transition: 0.5s;
+}
+
+#introducao {
+    padding-top: 214px;
+    padding-bottom: 141px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+#tituloIntroducao {
+    font-weight: 700;
+    font-size: 100px;
+}
+
+#botoesIntroducao {
+    display: flex;
+    justify-content: space-center;
+    gap: 22px;
+}
+
+#laptop {
+    /* Este margin-top se deve ao aumento do gap no #introducao em relação dos botões para esta imagem */
+    margin-top: 30px;
+    width: 80%;
+}
