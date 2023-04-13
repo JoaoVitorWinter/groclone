@@ -14,8 +14,9 @@ body {
     --cor-primaria: #FC4B37;
     --cor-secundaria: #000;
     --cor-terciaria: #FFF;
-    --cor-auxiliar1: #F4F4F4;
-    --cor-auxiliar2: #D8D8D8;
+    --cor-quaternaria: #F4F4F4;
+    --cor-auxiliar1: #111;
+    --cor-auxiliar2: #222529;
 
     --fonte-primaria: 'Satoshi', sans-serif;
     --fonte-secundaria: 'Kayak Sans', sans-serif;
@@ -51,15 +52,18 @@ header {
 }
 
 .botaoLink {
-    color: var(--cor-secundaria);
     text-decoration: none;
-    background-color: var(--cor-terciaria);
     border-radius: 100px;
     font-weight: 700;
     font-size: 18px;
-    padding: 18px 34px;
-    border: solid 1px var(--cor-terciaria);
+    padding: 20px 35px;
     transition: 0.5s;
+}
+
+header .botaoLink, #introducao .botaoLink {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    border: solid 1px var(--cor-terciaria);
 }
 
 header .botaoLink:hover, #introducao .botaoLink:hover {
@@ -68,9 +72,22 @@ header .botaoLink:hover, #introducao .botaoLink:hover {
     transition: 0.5s;
 }
 
+#features .botaoLink {
+    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
+    border: solid 1px var(--cor-primaria);
+}
+
+#features .botaoLink:hover {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    border-color: var(--cor-secundaria);
+    transition: 0.5s;
+}
+
 #introducao {
-    padding-top: 214px;
-    padding-bottom: 141px;
+    padding-top: 215px;
+    padding-bottom: 140px;
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     display: flex;
@@ -86,14 +103,177 @@ header .botaoLink:hover, #introducao .botaoLink:hover {
     font-size: 100px;
 }
 
-#botoesIntroducao {
+#botoesIntroducao, #botoesFeatures {
     display: flex;
     justify-content: space-center;
-    gap: 22px;
+    gap: 20px;
 }
 
 #laptop {
     /* Este margin-top se deve ao aumento do gap no #introducao em relação dos botões para esta imagem */
     margin-top: 30px;
     width: 80%;
+}
+
+#apresentacao {
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    align-items: center;
+}
+
+#inicioApresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    width: 50%;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 10px;
+}
+
+#inicioApresentacao p, #apresentacaoProduto1 p {
+    font-size: 18px;
+}
+
+#apresentacaoProduto1, #apresentacaoProduto2 {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img[src="assets/interface1.png"] {
+    width: 40%;
+    border: var(--cor-quaternaria) 50px solid;
+    border-left: none;
+    border-radius: 20px;
+}
+
+#descricaoProduto1, #descricaoProduto2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.sobretitulo {
+    color: var(--cor-primaria);
+}
+
+#descricaoProduto1 ul, #descricaoProduto2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    font-weight: 500;
+}
+
+img[src="assets/check.png"] {
+    width: 15px;
+    margin-right: 5px;
+}
+
+img[src="assets/interface2.png"] {
+    width: 40%;
+    border: var(--cor-quaternaria) 50px solid;
+    border-right: none;
+    border-radius: 20px;
+}
+
+#features {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#features h2 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#destaque {
+    color: var(--cor-primaria);
+}
+
+#featureCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--cor-quaternaria);
+    padding: 25px 20px 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+img[src^="assets/iconFeature"] {
+    width: 60px;
+}
+
+.tituloFeature {
+    font-weight: 700;
+}
+
+#features .card p {
+    font-weight: 400;
+}
+
+#avaliacoes {
+    color: var(--cor-terciaria);
+    background-color: var(--cor-auxiliar1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 120px 0;
+}
+
+#descricaoSecaoAvaliacoes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#descricaoSecaoAvaliacoes h2 {
+    font-weight: 700;
+}
+
+#descricaoSecaoAvaliacoes p {
+    width: 70%;
+    font-weight: 400;
+}
+
+#conjuntoAvaliacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+}
+
+.cardAvaliacao {
+    background-color: var(--cor-auxiliar2);
+    width: 45%;
+    padding: 20px;
+}
+
+.informacoesUsuario {
+}
+
+.avatar {
+    width: 50px;
 }
