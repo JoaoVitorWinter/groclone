@@ -51,6 +51,11 @@ header {
     font-size: 16px;
 }
 
+#menuHeader a {
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
 .botaoLink {
     text-decoration: none;
     border-radius: 100px;
@@ -269,11 +274,109 @@ img[src^="assets/iconFeature"] {
     background-color: var(--cor-auxiliar2);
     width: 45%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.outrasInformacoesAvaliacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .informacoesUsuario {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5px;
 }
 
 .avatar {
     width: 50px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.aspas {
+    width: 100px;
+}
+
+#botoesNavegacaoAvaliacoes {
+    display: flex;
+    gap: 20px;
+}
+
+#botoesNavegacaoAvaliacoes i {
+    background-color: var(--cor-auxiliar2);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#botoesNavegacaoAvaliacoes i:hover {
+    background-color: var(--cor-primaria);
+    transition: 0.5s;
+}
+
+#conteudoFooter {
+    margin: auto;
+    padding: 150px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+}
+
+#propositoGroclone {
+    width: 25%;
+}
+
+#linksEContatos {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+}
+
+#linksEContatos ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.categoriaLinks {
+    font-weight: 700;
+}
+
+#linksEContatos a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+#contatoRedes {
+    display: flex;
+    gap: 5px;
+}
+
+.fa-brands {
+    /* color: var(--cor-terciaria); */
+    background-color: var(--cor-secundaria);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+hr {
+    margin: auto;
+    width: 95%;
+}
+
+#informacoesFinais {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 80px;
 }
