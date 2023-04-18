@@ -487,10 +487,15 @@ hr {
     }
 
     #conteudoFooter {
+        margin: auto;
         display: grid;
         row-gap: 50px;
         grid-template-columns: repeat(3, 1fr);
         padding: 100px 0;
+    }
+
+    #conteudoFooter > * {
+        justify-self: center;
     }
 
     #propositoGroclone {
