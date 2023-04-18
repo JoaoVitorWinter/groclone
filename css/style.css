@@ -24,8 +24,7 @@ body {
 
 header {
     position: fixed;
-    left: 0;
-    right: 0;
+    width: 100%;
     background-color: var(--cor-primaria);
     display: flex;
     flex-direction: row;
@@ -33,6 +32,7 @@ header {
     align-items: center;
     color: var(--cor-terciaria);
     padding: 20px 0;
+    box-sizing: border-box;
 }
 
 #nomeSite {
@@ -62,6 +62,7 @@ header {
     font-weight: 700;
     font-size: 18px;
     padding: 20px 35px;
+    text-align: center;
     transition: 0.5s;
 }
 
@@ -115,7 +116,6 @@ header .botaoLink:hover, #introducao .botaoLink:hover {
 }
 
 #laptop {
-    /* Este margin-top se deve ao aumento do gap no #introducao em relação dos botões para esta imagem */
     margin-top: 30px;
     width: 80%;
 }
@@ -277,6 +277,7 @@ img[src^="assets/iconFeature"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
     border-radius: 10px;
 }
 
@@ -297,6 +298,12 @@ img[src^="assets/iconFeature"] {
     width: 50px;
     grid-row-start: 1;
     grid-row-end: 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.nota, .nomeUsuario {
+    align-self: center;
 }
 
 .aspas {
@@ -326,22 +333,27 @@ img[src^="assets/iconFeature"] {
     padding: 150px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     gap: 20px;
     width: 90%;
 }
 
 #propositoGroclone {
     width: 25%;
+    margin-right: 300px;
 }
 
-#linksEContatos {
-    display: flex;
-    justify-content: space-around;
-    gap: 80px;
+#propositoGroclone h2 {
+    color: var(--cor-primaria);
+    font-size: 40px;
 }
 
-#linksEContatos ul {
+#propositoGroclone p {
+    font-size: 15px;
+}
+
+#conteudoFooter ul {
+    font-size: 13px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -350,11 +362,16 @@ img[src^="assets/iconFeature"] {
 
 .categoriaLinks {
     font-weight: 700;
+    font-size: 14px;
 }
 
-#linksEContatos a {
+#conteudoFooter a {
     text-decoration: none;
     color: var(--cor-secundaria);
+}
+
+address {
+    font-style: normal;
 }
 
 #contatoRedes {
@@ -363,7 +380,6 @@ img[src^="assets/iconFeature"] {
 }
 
 .fa-brands {
-    /* color: var(--cor-terciaria); */
     background-color: var(--cor-secundaria);
     height: 30px;
     width: 30px;
@@ -379,4 +395,143 @@ hr {
     display: flex;
     justify-content: space-between;
     padding: 25px 80px;
+    font-size: 11px;
+}
+
+.aparecer {
+    display: none;
+}
+
+
+@media (max-width: 576px) {
+    #apresentacaoProduto1, #apresentacaoProduto2 {
+        gap: 50px;
+    }
+
+    #apresentacaoProduto1 {
+        flex-direction: column;
+    }
+
+    #apresentacaoProduto2 {
+        flex-direction: column-reverse;
+    }
+
+    #apresentacaoProduto1 > *, #apresentacaoProduto2 > * {
+        width: 100%;
+    }
+
+    #tituloIntroducao {
+        font-size: 44px;
+    }
+
+    .aparecer {
+        display: inline;
+    }
+
+    .desaparecer {
+        display: none;
+    }
+    
+    header {
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    #introducao {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p, .botaoLink{
+        font-size: 14px;
+    }
+
+    #apresentacao {
+        gap: 100px;
+    }
+
+    #inicioApresentacao, #descricaoSecaoAvaliacoes {
+        width: 90%;
+    }
+
+    #featureCards {
+        grid-template-columns: 1fr;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    img[src^="assets/interface"] {
+        border-width: 25px;
+    }
+
+    .cardAvaliacao {
+        width: 90%;
+    }
+
+    .outrasInformacoesAvaliacao {
+        
+    }
+
+    .aspas {
+        width: 50px;
+    }
+
+    .avatar {
+        width: 28px;
+    }
+
+    .nota {
+        width: 50px;
+    }
+
+    #conteudoFooter {
+        display: grid;
+        row-gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 100px 0;
+    }
+
+    #propositoGroclone {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: fit-content;
+        margin-right: 100px;
+    }
+
+    #propositoGroclone h2 {
+        font-size: 24px;
+    }
+
+    #propositoGroclone p {
+        font-size: 12px;
+    }
+
+    .categoriaLinks {
+        font-size: 16px;
+    }
+
+    address {
+        grid-row-start: 1;
+        grid-column-start: 3;
+    }
+
+    #conteudoFooter ul {
+        font-size: 14px;
+    }
+
+    #informacoesFinais {
+        padding: 25px 20px;
+    }
+
+    #informacoesFinais p {
+        font-size: 10px;
+    }
+
+
 }
