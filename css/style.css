@@ -403,7 +403,7 @@ hr {
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 956px) {
     #apresentacaoProduto1, #apresentacaoProduto2 {
         gap: 50px;
     }
@@ -474,10 +474,6 @@ hr {
         width: 90%;
     }
 
-    .outrasInformacoesAvaliacao {
-        
-    }
-
     .aspas {
         width: 50px;
     }
@@ -500,7 +496,7 @@ hr {
     #propositoGroclone {
         grid-column-start: 1;
         grid-column-end: 3;
-        width: fit-content;
+        width: initial;
         margin-right: 100px;
     }
 
