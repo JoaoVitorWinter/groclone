@@ -494,8 +494,12 @@ hr {
         padding: 100px 0;
     }
 
-    #conteudoFooter > * {
+    #suporte {
         justify-self: center;
+    }
+
+    address, #parceiros {
+        justify-self: flex-end;
     }
 
     #propositoGroclone {
