@@ -6,7 +6,7 @@ Trabalho realizado para mimetizar layouts escolhidos pelo professor. O projeto f
 
 Caso queira executá-lo localmente, instale o repositório com os arquivos; encontrado no seguinte link: https://github.com/JoaoVitorWinter/groclone
 
-Para instalar, clique no botao "<> Code", e depois no botão "Download ZIP". Agora o projeto está instalado na sua máquina.
+Para instalar, clique no botao "<> Code", e depois no botão "Download ZIP". Agora o projeto está baixado na sua máquina.
 
 Para rodar com segurança, é recomendado que você extraia o conteúdo do arquivo ZIP. Normalmente isso é feito clicando com o botão direito do mouse no arquivo ZIP, e então, apertando no botão "Extrair Tudo".
 
