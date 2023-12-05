@@ -1,14 +1,14 @@
 {
     "name": "groclone",
     "short_name": "groclone",
-    "start_url": "index.html",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#FC4B37",
     "theme_color": "#FC4B37",
     "orientation": "portrait",
     "icons": [
         {
-            "src": "./assets/iconFeature1.png",
+            "src": "/assets/iconFeature1.png",
             "type": "image/png",
             "sizes": "80x80"
         }

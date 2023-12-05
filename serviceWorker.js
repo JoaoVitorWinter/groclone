@@ -1,10 +1,10 @@
 const cacheGroclone = "groclone-v1"
 
 const assets = [
-    "./",
-    "./index.html",
-    "./css/style.css",
-    "./assets/iconFeature1.png"
+    "/",
+    "/index.html",
+    "/css/style.css",
+    "/assets/iconFeature1.png"
 ]
 
 self.addEventListener("install", installEvent => {
