@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/75efa16dd6.js" crossorigin="anonymous"></script>
     <title>Groclone</title>
@@ -227,6 +228,16 @@
             <p>Terms & Conditions , Privacy Policy<span class="desaparecer"> , Sitemap</span></p>
         </div>
     </footer>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("./serviceWorker.js")
+                    .then(res => console.log("service worker registered"))
+                    .catch(err => console.log("service worker not registered", err))
+            })
+        }
+    </script>
 </body>
 
 </html>
