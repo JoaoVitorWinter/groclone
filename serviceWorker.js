@@ -3,6 +3,7 @@ var cacheGroclone = 'groclone-v1';
 const assets = [
     "/",
     "/index.html",
+    "/manifest.webmanifest",
     "/css/style.css",
     "/assets/avatar1.png",
     "/assets/avatar2.png",
@@ -10,6 +11,8 @@ const assets = [
     "/assets/citacaoAspas.png",
     "/assets/estrelasAvaliacao.png",
     "/assets/facebook.png",
+    "/assets/icon192.png",
+    "/assets/icon512.png",
     "/assets/iconFeature1.png",
     "/assets/iconFeature2.png",
     "/assets/iconFeature3.png",
