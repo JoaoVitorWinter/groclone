@@ -3,6 +3,7 @@ var cacheGroclone = 'groclone-v1';
 const assets = [
     "/",
     "/index.html",
+    "/manifest.webmanifest",
     "/css/style.css",
     "/assets/avatar1.png",
     "/assets/avatar2.png",
@@ -37,6 +38,21 @@ self.addEventListener('install', function (event) {
 
   )
 
+});
+
+self.addEventListener('activate', function activator(event) {
+  event.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys
+        .filter(function (key) {
+          return key.indexOf(cacheGroclone) !== 0;
+        })
+        .map(function (key) {
+          return caches.delete(key);
+        })
+      );
+    })
+  );
 });
 
 
